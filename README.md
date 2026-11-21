@@ -1,4 +1,107 @@
-# Addressing Function Approximation Error in Actor-Critic Methods
+# TD3-SP: TD3 with state prediction
+
+TD3-SP adds an action-conditioned state prediction model to the original TD3
+implementation. It learns the change in observation from a real transition:
+
+`(current state, applied action) -> predicted next state`
+
+The predictor trains alongside the project as a separate experiment. Its
+predictions do not yet change the actor's actions or the critics' targets.
+
+## What is included
+
+- A normalized residual neural network with save/load and recursive forecasts.
+- Transition recording from the TD3 training loop or a standalone environment.
+- Separate **training, validation, and test episodes**, including correct handling
+  of terminal states and time limits.
+- One-step and multi-step RMSE, MAE, bias, and errors by state dimension.
+- Persistence and fitted linear dynamics baselines.
+- Early stopping and best-validation checkpoint selection.
+- An `improve` command with an optional multi-step training loss. A candidate is
+  accepted only if its validation score improves; the original file is preserved.
+- Readable Markdown, JSON, and training-history CSV reports.
+
+## Install
+
+Use Python 3.10 or newer. From this repository:
+
+```bash
+python -m venv .venv
+```
+
+Activate with `.venv\Scripts\Activate.ps1` on Windows PowerShell, or
+`source .venv/bin/activate` on Linux/macOS. Then install:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+For a CPU-only PyTorch installation, install it first with
+`python -m pip install "torch>=2.5,<3" --index-url https://download.pytorch.org/whl/cpu`,
+then install the requirements. MuJoCo is optional; neither the demo nor Pendulum
+requires it.
+
+## Try the complete workflow
+
+```bash
+python -m state_prediction demo --output runs/demo
+python -m state_prediction evaluate --data runs/demo/data.npz --checkpoint runs/demo/model.pt
+python -m state_prediction improve --data runs/demo/data.npz --checkpoint runs/demo/model.pt --output runs/demo-improved
+```
+
+The demo uses a small synthetic point-mass navigation system with velocity,
+nonlinear drag, and a current term. **It is not a validated AUV simulator.**
+Each output directory contains `model.pt`, `report.md`, `report.json`, and
+`history.csv`. The demo also saves `data.npz`. Use a new output directory for each
+run so previous results remain available.
+
+The improvement command may report `kept_incumbent`. That means its extra
+training did not beat the existing model on the frozen validation set.
+
+## Use an actual Gymnasium environment
+
+```bash
+python -m state_prediction collect --env Pendulum-v1 --episodes 30 --output datasets/pendulum.npz
+python -m state_prediction train --data datasets/pendulum.npz --output runs/pendulum --state-names cos_theta sin_theta angular_velocity
+```
+
+You can also record transitions while TD3 learns:
+
+```bash
+python main.py --env Pendulum-v1 --max_timesteps 10000 --start_timesteps 1000 --prediction_data datasets/td3-pendulum.npz --save_model
+python -m state_prediction train --data datasets/td3-pendulum.npz --output runs/td3-predictor
+```
+
+`--prediction_capacity` limits the archive to the newest 100,000 transitions by
+default. TD3's replay buffer is separate. Evaluation episodes are not added to
+the prediction archive. At least three recorded episodes are required to train;
+more episodes give a more useful assessment.
+
+To collect from a saved actor without retraining TD3:
+
+```bash
+python -m state_prediction collect --env Pendulum-v1 --episodes 30 --policy-checkpoint models/TD3_Pendulum-v1_0 --output datasets/actor-pendulum.npz
+```
+
+See **[the state prediction guide](docs/STATE_PREDICTION.md)** for the architecture,
+accuracy metrics, improvement procedure, and integration with your own AUV data.
+See **[verified example results](docs/STATE_PREDICTION_RESULTS.md)** for measured runs.
+
+## Tests
+
+```bash
+python -m pip install -r requirements-dev.txt
+python -m pytest -q
+```
+
+## Original TD3 implementation and attribution
+
+The sections below describe the upstream research implementation and historical
+results. Its original Python/PyTorch/Gym versions are historical, not the current
+requirements above. The runner accepts both Gymnasium and the legacy Gym API;
+historical `*-v2` MuJoCo IDs require their corresponding legacy environment.
+
+### Addressing Function Approximation Error in Actor-Critic Methods
 
 PyTorch implementation of Twin Delayed Deep Deterministic Policy Gradients (TD3). If you use our code or data please cite the [paper](https://arxiv.org/abs/1802.09477).
 

@@ -1,0 +1,400 @@
+{
+  "format": "td3-sp-action-selection-comparison",
+  "version": 1,
+  "environment": "Pendulum-v1",
+  "settings": {
+    "episodes": 5,
+    "episode_seeds": [
+      123,
+      124,
+      125,
+      126,
+      127
+    ],
+    "candidate_seeds": [
+      1000123,
+      1000124,
+      1000125,
+      1000126,
+      1000127
+    ],
+    "candidates": 16,
+    "noise_std": 0.2,
+    "horizon": 1,
+    "discount": 0.99,
+    "exploration_std": 0.0,
+    "device": "cpu"
+  },
+  "interpretation": [
+    "All modes use one frozen actor, critic pair, and predictor.",
+    "Reset seeds and candidate-noise streams are paired; trajectories may diverge.",
+    "Return differences are descriptive for these episodes, not evidence across training seeds.",
+    "Latency is wall-clock action selection time and includes first-call overhead."
+  ],
+  "modes": {
+    "actor": {
+      "episodes": [
+        {
+          "episode": 0,
+          "seed": 123,
+          "candidate_seed": 1000123,
+          "return": -1643.799802923147,
+          "steps": 200,
+          "terminated": false,
+          "truncated": true,
+          "interventions": 0,
+          "fallbacks": 0,
+          "invalid_candidates": 0,
+          "latency_ms": {
+            "median": 0.1433955001175491,
+            "p95": 0.4294465500379364,
+            "max": 2.1798699999635573
+          }
+        },
+        {
+          "episode": 1,
+          "seed": 124,
+          "candidate_seed": 1000124,
+          "return": -1708.4841145059515,
+          "steps": 200,
+          "terminated": false,
+          "truncated": true,
+          "interventions": 0,
+          "fallbacks": 0,
+          "invalid_candidates": 0,
+          "latency_ms": {
+            "median": 0.13664649986822042,
+            "p95": 0.3245288500465903,
+            "max": 0.6375080001816968
+          }
+        },
+        {
+          "episode": 2,
+          "seed": 125,
+          "candidate_seed": 1000125,
+          "return": -1737.7722483706755,
+          "steps": 200,
+          "terminated": false,
+          "truncated": true,
+          "interventions": 0,
+          "fallbacks": 0,
+          "invalid_candidates": 0,
+          "latency_ms": {
+            "median": 0.13586699992629292,
+            "p95": 0.31910829995922535,
+            "max": 0.9566929998072737
+          }
+        },
+        {
+          "episode": 3,
+          "seed": 126,
+          "candidate_seed": 1000126,
+          "return": -1792.6939983703994,
+          "steps": 200,
+          "terminated": false,
+          "truncated": true,
+          "interventions": 0,
+          "fallbacks": 0,
+          "invalid_candidates": 0,
+          "latency_ms": {
+            "median": 0.1304099998833408,
+            "p95": 0.23979614979907626,
+            "max": 0.5095849996905599
+          }
+        },
+        {
+          "episode": 4,
+          "seed": 127,
+          "candidate_seed": 1000127,
+          "return": -1797.0073440240114,
+          "steps": 200,
+          "terminated": false,
+          "truncated": true,
+          "interventions": 0,
+          "fallbacks": 0,
+          "invalid_candidates": 0,
+          "latency_ms": {
+            "median": 0.13662400010616693,
+            "p95": 0.3577980001864486,
+            "max": 2.4597589999757474
+          }
+        }
+      ],
+      "summary": {
+        "mean_return": -1735.951501638837,
+        "std_return": 56.91613984706141,
+        "total_steps": 1000,
+        "intervention_rate": 0.0,
+        "fallback_rate": 0.0,
+        "invalid_candidates": 0,
+        "latency_ms": {
+          "median": 0.13706350000575185,
+          "p95": 0.326916350218198,
+          "max": 2.4597589999757474
+        }
+      }
+    },
+    "critic": {
+      "episodes": [
+        {
+          "episode": 0,
+          "seed": 123,
+          "candidate_seed": 1000123,
+          "return": -1599.8622205274164,
+          "steps": 200,
+          "terminated": false,
+          "truncated": true,
+          "interventions": 191,
+          "fallbacks": 0,
+          "invalid_candidates": 0,
+          "latency_ms": {
+            "median": 0.6551115000092977,
+            "p95": 1.5785641000320496,
+            "max": 73.01331400003619
+          }
+        },
+        {
+          "episode": 1,
+          "seed": 124,
+          "candidate_seed": 1000124,
+          "return": -1655.3289060529864,
+          "steps": 200,
+          "terminated": false,
+          "truncated": true,
+          "interventions": 200,
+          "fallbacks": 0,
+          "invalid_candidates": 0,
+          "latency_ms": {
+            "median": 0.6325739998374047,
+            "p95": 1.0489373497648555,
+            "max": 1.4333520002765
+          }
+        },
+        {
+          "episode": 2,
+          "seed": 125,
+          "candidate_seed": 1000125,
+          "return": -1702.7351804913462,
+          "steps": 200,
+          "terminated": false,
+          "truncated": true,
+          "interventions": 197,
+          "fallbacks": 0,
+          "invalid_candidates": 0,
+          "latency_ms": {
+            "median": 0.6082114998662291,
+            "p95": 1.0543874002223674,
+            "max": 1.5766790002089692
+          }
+        },
+        {
+          "episode": 3,
+          "seed": 126,
+          "candidate_seed": 1000126,
+          "return": -1739.9576302230491,
+          "steps": 200,
+          "terminated": false,
+          "truncated": true,
+          "interventions": 200,
+          "fallbacks": 0,
+          "invalid_candidates": 0,
+          "latency_ms": {
+            "median": 0.6180489999678684,
+            "p95": 1.08798814990223,
+            "max": 2.1351819996198174
+          }
+        },
+        {
+          "episode": 4,
+          "seed": 127,
+          "candidate_seed": 1000127,
+          "return": -1749.1848098417495,
+          "steps": 200,
+          "terminated": false,
+          "truncated": true,
+          "interventions": 197,
+          "fallbacks": 0,
+          "invalid_candidates": 0,
+          "latency_ms": {
+            "median": 0.6073200001992518,
+            "p95": 0.9946708501729512,
+            "max": 3.1132499998420826
+          }
+        }
+      ],
+      "summary": {
+        "mean_return": -1689.4137494273095,
+        "std_return": 55.65245178914399,
+        "total_steps": 1000,
+        "intervention_rate": 0.985,
+        "fallback_rate": 0.0,
+        "invalid_candidates": 0,
+        "latency_ms": {
+          "median": 0.6234029999632185,
+          "p95": 1.1529829500432243,
+          "max": 73.01331400003619
+        }
+      }
+    },
+    "lookahead": {
+      "episodes": [
+        {
+          "episode": 0,
+          "seed": 123,
+          "candidate_seed": 1000123,
+          "return": -1560.492496871377,
+          "steps": 200,
+          "terminated": false,
+          "truncated": true,
+          "interventions": 200,
+          "fallbacks": 0,
+          "invalid_candidates": 0,
+          "latency_ms": {
+            "median": 1.4505255001040496,
+            "p95": 2.157915800216869,
+            "max": 4.706992000137689
+          }
+        },
+        {
+          "episode": 1,
+          "seed": 124,
+          "candidate_seed": 1000124,
+          "return": -1616.5244743920944,
+          "steps": 200,
+          "terminated": false,
+          "truncated": true,
+          "interventions": 199,
+          "fallbacks": 0,
+          "invalid_candidates": 0,
+          "latency_ms": {
+            "median": 1.4800434998960554,
+            "p95": 3.219947149955257,
+            "max": 5.281813000237889
+          }
+        },
+        {
+          "episode": 2,
+          "seed": 125,
+          "candidate_seed": 1000125,
+          "return": -1610.0072822470718,
+          "steps": 200,
+          "terminated": false,
+          "truncated": true,
+          "interventions": 199,
+          "fallbacks": 0,
+          "invalid_candidates": 0,
+          "latency_ms": {
+            "median": 1.4287509998212045,
+            "p95": 3.1806099501181913,
+            "max": 4.7703329996693355
+          }
+        },
+        {
+          "episode": 3,
+          "seed": 126,
+          "candidate_seed": 1000126,
+          "return": -1619.3057681263258,
+          "steps": 200,
+          "terminated": false,
+          "truncated": true,
+          "interventions": 200,
+          "fallbacks": 0,
+          "invalid_candidates": 0,
+          "latency_ms": {
+            "median": 1.512101499884011,
+            "p95": 3.937609750164483,
+            "max": 4.703274999883433
+          }
+        },
+        {
+          "episode": 4,
+          "seed": 127,
+          "candidate_seed": 1000127,
+          "return": -1613.8554863842717,
+          "steps": 200,
+          "terminated": false,
+          "truncated": true,
+          "interventions": 200,
+          "fallbacks": 0,
+          "invalid_candidates": 0,
+          "latency_ms": {
+            "median": 1.4210794997779885,
+            "p95": 4.1120324500525385,
+            "max": 4.890907000117295
+          }
+        }
+      ],
+      "summary": {
+        "mean_return": -1604.0371016042284,
+        "std_return": 21.9874645852749,
+        "total_steps": 1000,
+        "intervention_rate": 0.998,
+        "fallback_rate": 0.0,
+        "invalid_candidates": 0,
+        "latency_ms": {
+          "median": 1.4548389999617939,
+          "p95": 3.50463929989928,
+          "max": 5.281813000237889
+        }
+      }
+    }
+  },
+  "paired_return_differences": {
+    "critic_minus_actor": {
+      "per_episode": [
+        43.93758239573049,
+        53.1552084529651,
+        35.03706787932924,
+        52.73636814735028,
+        47.82253418226196
+      ],
+      "mean": 46.53775221152741
+    },
+    "lookahead_minus_actor": {
+      "per_episode": [
+        83.30730605176996,
+        91.95964011385718,
+        127.7649661236037,
+        173.3882302440736,
+        183.15185763973977
+      ],
+      "mean": 131.91440003460883
+    },
+    "lookahead_minus_critic": {
+      "per_episode": [
+        39.36972365603947,
+        38.80443166089208,
+        92.72789824427446,
+        120.65186209672333,
+        135.3293234574778
+      ],
+      "mean": 85.37664782308143
+    }
+  },
+  "checkpoints": {
+    "actor": {
+      "path": "models/TD3_Pendulum-v1_0_actor",
+      "sha256": "07d0d431640167a4ec2f392fe189f7cc25f6c86b7ff4f82ad610daec4e0c5ab9"
+    },
+    "critic": {
+      "path": "models/TD3_Pendulum-v1_0_critic",
+      "sha256": "84aa208eed94a474b6ea47b0489f9492952040de79979355fe3bbafae178941d"
+    },
+    "predictor": {
+      "path": "runs/pendulum-improved/model.pt",
+      "sha256": "dc814a0deaccdab4798aff9564271737486456857af8b8999b9948acd79f397e"
+    }
+  },
+  "context": {
+    "measurement_date": "2026-11-25",
+    "purpose": "integration_smoke",
+    "policy_training_steps": 650,
+    "independent_training_seeds": 1,
+    "python": "3.12.14",
+    "torch": "2.5.1+cpu",
+    "numpy": "2.3.5",
+    "gymnasium": "1.4.0",
+    "cpu_threads": 1,
+    "limits": "Five evaluation episodes using one lightly trained policy; no learning-efficiency, AUV-transfer, or safety conclusion."
+  }
+}

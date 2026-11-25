@@ -1,0 +1,46 @@
+{
+  "format": "td3-sp-action-selection-training",
+  "version": 1,
+  "environment": "Pendulum-v1",
+  "seed": 271,
+  "selection": {
+    "mode": "lookahead",
+    "candidates": 16,
+    "noise_std": 0.2,
+    "horizon": 3,
+    "seed": 271
+  },
+  "discount": 0.99,
+  "exploration_noise": 0.1,
+  "start_timesteps": 100,
+  "max_timesteps": 650,
+  "prediction_checkpoint": "runs/pendulum-improved/model.pt",
+  "prediction_sha256": "dc814a0deaccdab4798aff9564271737486456857af8b8999b9948acd79f397e",
+  "training_selection": {
+    "calls": 550,
+    "interventions": 544,
+    "fallbacks": 0,
+    "invalid_candidates": 0,
+    "total_elapsed_ms": 1764.2001880008138
+  },
+  "notes": [
+    "The predictor is fixed during TD3 training.",
+    "Evaluation uses a separate candidate RNG and no exploration.",
+    "These monitoring evaluations are not an independent final benchmark."
+  ],
+  "evaluation_returns": [
+    -1438.699222754825,
+    -678.2459158794813
+  ],
+  "verification": {
+    "measurement_date": "2026-11-25",
+    "purpose": "integration_smoke",
+    "archive_transitions": 650,
+    "archive_episodes": 4,
+    "archive_fingerprint": "d9f1cf3f7abf8b4a62a9df39c3f0a0523177bf31287ff663019711443acce533",
+    "recorded_actions_within_bounds": true,
+    "policy_weights_reloaded_and_finite": true,
+    "predictor_unchanged": true,
+    "limits": "One 650-step training run checks integration; this is not a matched-budget performance benchmark."
+  }
+}

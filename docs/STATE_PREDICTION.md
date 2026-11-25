@@ -8,11 +8,12 @@ velocity, estimated current, and tracked obstacle information. The current
 repository contains generic TD3 and demonstration environments; it does not
 contain a hydrodynamically validated AUV simulator or a real-vehicle dataset.
 
-The predictor is separate from TD3's actor and twin critics. Training it does
-not alter TD3 action selection, rewards, replay sampling, or Bellman targets.
-Prediction improvements therefore do **not** establish improved navigation,
-collision avoidance, or policy reward. Those require a later controlled policy
-comparison after deciding how to use the predictions.
+The predictor trains separately from TD3's actor and twin critics. Training it
+does not automatically change the controller. The optional [lookahead selector](LOOKAHEAD.md)
+uses a saved predictor to compare candidate actions; TD3 losses, replay labels,
+and Bellman targets remain unchanged. Prediction improvements alone do **not**
+establish improved navigation, collision avoidance, or policy reward. The
+lookahead comparison command measures actual return with frozen policy networks.
 
 ## Architecture
 
@@ -209,8 +210,10 @@ For single inputs, shapes are `[state_dim]`, `[action_dim]`, and
 Batched inputs add a leading batch dimension.
 
 These are deterministic forecasts. The model does not currently provide an
-ensemble, calibrated confidence intervals, collision guarantees, or an MPC action
-selector. Evaluation quantifies the errors before such extensions are attempted.
+ensemble, calibrated confidence intervals, or collision guarantees. The optional
+[lookahead selector](LOOKAHEAD.md) combines these forecasts with task rewards and
+TD3 critics. Its later rollout actions are recomputed by the actor at predicted
+states; the fixed-action ``rollout`` helper above is a separate evaluation API.
 
 ## References
 

@@ -5,8 +5,9 @@ implementation. It learns the change in observation from a real transition:
 
 `(current state, applied action) -> predicted next state`
 
-The predictor trains alongside the project as a separate experiment. Its
-predictions do not yet change the actor's actions or the critics' targets.
+The predictor trains as a separate experiment. Optional **short lookahead action
+selection** now uses it to compare nearby actions before executing one. Ordinary
+TD3 remains the default; its critic targets and training losses are unchanged.
 
 ## What is included
 
@@ -20,6 +21,11 @@ predictions do not yet change the actor's actions or the critics' targets.
 - An `improve` command with an optional multi-step training loss. A candidate is
   accepted only if its validation score improves; the original file is preserved.
 - Readable Markdown, JSON, and training-history CSV reports.
+- Optional actor-only, critic-only search, and model lookahead controllers.
+- Batched action candidates, actor feedback during short rollouts, and correct
+  reward/termination handling with a built-in Pendulum adapter.
+- Frozen-controller comparisons with paired seeds, observed returns, latency,
+  interventions, fallback counts, and checkpoint identities.
 
 ## Install
 
@@ -86,6 +92,33 @@ python -m state_prediction collect --env Pendulum-v1 --episodes 30 --policy-chec
 See **[the state prediction guide](docs/STATE_PREDICTION.md)** for the architecture,
 accuracy metrics, improvement procedure, and integration with your own AUV data.
 See **[verified example results](docs/STATE_PREDICTION_RESULTS.md)** for measured runs.
+
+## Use predictions to select actions
+
+After training a predictor for Pendulum, enable lookahead explicitly:
+
+```bash
+python main.py --env Pendulum-v1 --action_selection lookahead --prediction_checkpoint runs/td3-predictor/model.pt --planning_candidates 16 --planning_horizon 1 --max_timesteps 10000 --start_timesteps 1000 --eval_episodes 5 --threads 1 --save_model
+```
+
+The actor's original action is one candidate. Other candidates are nearby bounded
+actions. Each is scored using predicted immediate rewards plus the lower of the
+two critics' estimates at the end of the rollout. Only the first action executes;
+the next decision starts from the real observation. The predictor stays fixed
+during this training run. Exploration is applied before scoring, with no noise
+added afterward. `--action_selection critic` runs candidate search without a model.
+
+Compare the same saved actor and critics in all three modes:
+
+```bash
+python -m action_selection compare --env Pendulum-v1 --policy_checkpoint models/TD3_Pendulum-v1_0 --prediction_checkpoint runs/td3-predictor/model.pt --episodes 10 --seed 123 --candidates 16 --horizon 1 --threads 1 --output runs/frozen-comparison.json
+```
+
+The built-in task adapter supports standard Pendulum. Other environments need an
+explicit reward/true-termination callable; the CLI rejects unsupported tasks.
+This is an experimental controller, without calibrated uncertainty or vehicle
+safety guarantees. See **[the lookahead guide](docs/LOOKAHEAD.md)** for formulas,
+training/evaluation commands, custom-task integration, and measured smoke results.
 
 ## Tests
 

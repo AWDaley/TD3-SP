@@ -168,4 +168,33 @@ class TD3(object):
 		self.actor.load_state_dict(torch.load(filename + "_actor"))
 		self.actor_optimizer.load_state_dict(torch.load(filename + "_actor_optimizer"))
 		self.actor_target = copy.deepcopy(self.actor)
-		
+
+
+	def load_for_evaluation(self, filename):
+		"""Load actor/critic weights without requiring optimizer checkpoints.
+
+		Use ``load`` when resuming training. This method deliberately does not
+		restore optimizer state and loads only tensor state dictionaries.
+		"""
+		filename = str(filename)
+		actor_device = next(self.actor.parameters()).device
+		critic_device = next(self.critic.parameters()).device
+		actor = copy.deepcopy(self.actor)
+		critic = copy.deepcopy(self.critic)
+		actor.load_state_dict(torch.load(
+			filename + "_actor", map_location=actor_device, weights_only=True,
+		))
+		critic.load_state_dict(torch.load(
+			filename + "_critic", map_location=critic_device, weights_only=True,
+		))
+		if any(not torch.isfinite(value).all() for network in (actor, critic)
+				for value in network.state_dict().values()):
+			raise ValueError("Policy checkpoint contains nonfinite weights")
+		# Validate both files before changing either live network. Keep the
+		# original Parameter objects so optimizer references remain consistent.
+		self.actor.load_state_dict(actor.state_dict())
+		self.critic.load_state_dict(critic.state_dict())
+		self.actor.eval()
+		self.critic.eval()
+		self.actor_target = copy.deepcopy(self.actor)
+		self.critic_target = copy.deepcopy(self.critic)

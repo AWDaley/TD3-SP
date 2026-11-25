@@ -1,0 +1,4 @@
+{"checkpoint": "/workspace/scratch/a82d0eeb6c0e/TD3-SP/runs/lookahead-extensive/seed_11/critic/checkpoint_05000", "seed": 11, "mode": "critic", "online_step": 5000}
+{"checkpoint": "/workspace/scratch/a82d0eeb6c0e/TD3-SP/runs/lookahead-extensive/seed_11/critic/checkpoint_20000", "seed": 11, "mode": "critic", "online_step": 20000}
+{"complete": "/workspace/scratch/a82d0eeb6c0e/TD3-SP/runs/lookahead-extensive/seed_11/critic", "seed": 11, "mode": "critic", "deployed_return": -151.82407265699206, "actor_return": -151.83622297710312, "online_training_seconds": 125.79577206299837}
+{}

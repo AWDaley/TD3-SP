@@ -215,6 +215,13 @@ not provide an AUV reward adapter or calibrated risk/uncertainty model.
 
 ## Verification and interpretation
 
+The [extended five-seed validation](LOOKAHEAD_EXTENSIVE_RESULTS.md) tests matched
+training budgets, frozen-controller horizons, early checkpoints, and exact-dynamics
+diagnostics. Its [protocol](LOOKAHEAD_TEST_PROTOCOL.md) separates the original
+endpoints from a secondary follow-up. These results qualify the earlier smoke
+check: planning helps immature controllers in this experiment, but the final
+five-seed comparisons do not establish a reliable average return advantage.
+
 See [measured integration checks](LOOKAHEAD_RESULTS.md) and their linked JSON
 records. Unit/integration checks cover analytical returns, terminal branches,
 actor feedback, clipping, invalid predictions, RNG isolation, checkpoint loading,

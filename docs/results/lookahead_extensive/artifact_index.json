@@ -1,0 +1,434 @@
+[
+  {
+    "source": "runs/lookahead-extensive/manifest.json",
+    "source_sha256": "b20b5455e9aea97b09b6bfebb64f1e8cce4f543c9a7bda18f64ef5351c2acb52",
+    "archive": "manifest.json",
+    "archive_sha256": "b20b5455e9aea97b09b6bfebb64f1e8cce4f543c9a7bda18f64ef5351c2acb52",
+    "bytes": 3784,
+    "transformation": "byte-exact copy"
+  },
+  {
+    "source": "runs/lookahead-extensive/seed_11/actor/result.json",
+    "source_sha256": "83fa6e204f207549eb4e6f88f3e628720514a1cb166d44a78d43bc45db20147a",
+    "archive": "seed_11_actor.json",
+    "archive_sha256": "2abeb5ddac809e350cbbff671ee37d3c93fcd495877a44371af94d8df5ac1622",
+    "bytes": 51042,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive/seed_11/critic/result.json",
+    "source_sha256": "8bd695152796fbfea328da8228fbd268e834a8396c9098c7653b44e6f21f1a96",
+    "archive": "seed_11_critic.json",
+    "archive_sha256": "5ad8b5f493b84a3bb16baf61280b066cfe5b2ef474fa23196becc50b3c58b5c7",
+    "bytes": 24393,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive/seed_11/lookahead/result.json",
+    "source_sha256": "217bd25502e82de1e5c2129c4ee72c111a3f482c666a9440474dcfd82189089e",
+    "archive": "seed_11_lookahead.json",
+    "archive_sha256": "fe23576ea1bc962708c4d332a26ff6b6fea2d8b65a1da5be882d84daf9dd3a28",
+    "bytes": 24441,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive/seed_22/actor/result.json",
+    "source_sha256": "93224a5246b5d2810c36807fe2f1368c7a4874bc72ee5af5fa195f459922c708",
+    "archive": "seed_22_actor.json",
+    "archive_sha256": "7626e92a49b1c6f4636e1b4b019fd3198d1238b573efc81c9e5c21f9d3bfeec2",
+    "bytes": 51064,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive/seed_22/critic/result.json",
+    "source_sha256": "24b3977849f82ce4509823b6970f2cfe38890353e495cc1d23738f1786675c12",
+    "archive": "seed_22_critic.json",
+    "archive_sha256": "5ae35b4306cfbecea079a666b90b4bd868b0b83101255c31cf13af73684a47c7",
+    "bytes": 24393,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive/seed_22/lookahead/result.json",
+    "source_sha256": "c42c922db3cc6ef30ce8ec8eed2a89ed4268b8adb615d7b0e050db75994c3709",
+    "archive": "seed_22_lookahead.json",
+    "archive_sha256": "4b3d9bb9a5473de18b67bbb5d9da361662061c7cb9a22af88354cea46a8f82b9",
+    "bytes": 24403,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive/seed_33/actor/result.json",
+    "source_sha256": "3cf232c77b6900933d501e3f97b226cacd82d658052fd915d521103a20ca8601",
+    "archive": "seed_33_actor.json",
+    "archive_sha256": "f42b7f5bc5e8d6dce5147c7acf593eb39ae713220a204b7ac07d341131a726e7",
+    "bytes": 51092,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive/seed_33/critic/result.json",
+    "source_sha256": "f978ff584de3df8f80a9737b8b894ecd7434568479b1cfc1d856994b66523c22",
+    "archive": "seed_33_critic.json",
+    "archive_sha256": "f1bce4b732c2224061d5ab17e08f229985166cd92590b93e777dc654389bd44e",
+    "bytes": 24420,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive/seed_33/lookahead/result.json",
+    "source_sha256": "5968d223b409ebbd16c8dbae119b2d9af64fcbe120e3b756fa8e138e22d5a751",
+    "archive": "seed_33_lookahead.json",
+    "archive_sha256": "b97b93b9628cbe8b434fb98c24c051cadc1087a973502d29568cb68d5bca21c0",
+    "bytes": 24415,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive/seed_44/actor/result.json",
+    "source_sha256": "1e12e79522604f14de6c0e72d7b06f0370a4f89c1ff032474fbaac5ae2945674",
+    "archive": "seed_44_actor.json",
+    "archive_sha256": "ad1376936ef6091773c1b8c4d11ffa700413a64eb9bf08e34cd013ad7a0016c5",
+    "bytes": 51049,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive/seed_44/critic/result.json",
+    "source_sha256": "5a07162baf2a695d6ff82cec6efa0b6186259ad5febcd20153be7d53d969731b",
+    "archive": "seed_44_critic.json",
+    "archive_sha256": "cef5e7d1a1c71676e959214bf1497e62acaf69d3795dda1b90e2b6aa9b12ba99",
+    "bytes": 24374,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive/seed_44/lookahead/result.json",
+    "source_sha256": "67655fc4bd8e793f568bcfa747f6fcfcc54c596550e29931b26078b6f2e46fd6",
+    "archive": "seed_44_lookahead.json",
+    "archive_sha256": "5d74f9c5e6d534d6893876e7c086db2cf0cec8685449e438e137e1c1129c72b4",
+    "bytes": 24394,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive/seed_55/actor/result.json",
+    "source_sha256": "f8144aac03c9bc93bfa343f4965b06293cbbb00a2c0099d080f61d358074249f",
+    "archive": "seed_55_actor.json",
+    "archive_sha256": "e70215dff91648f0baee7b6f58bea7fd628dbd23b674ce4f555f37d466b29cd3",
+    "bytes": 51084,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive/seed_55/critic/result.json",
+    "source_sha256": "d952d056d6822f884945b0e17bad34be8943b7d6e5f9c5dfdceebd000d22e311",
+    "archive": "seed_55_critic.json",
+    "archive_sha256": "d3a657e85907e17261fb13c3ee3c6bcaf422b1d6b826f17b2c9e00c454eef2d9",
+    "bytes": 24417,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive/seed_55/lookahead/result.json",
+    "source_sha256": "0ac862a57a5215d7b3b39f1e5459df8a1da92b2ac87fab59e37ead4f43232a12",
+    "archive": "seed_55_lookahead.json",
+    "archive_sha256": "510d513c8b21ab20fe672a17fb52c6d7fb3ea2618dffad274d6464e3aec495c2",
+    "bytes": 24391,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-diagnostics/final/forecast.json",
+    "source_sha256": "c54db768aedc29734b165e14adad2b4be187ab81771ea37f6b1ca0deccbd8a94",
+    "archive": "forecast.json",
+    "archive_sha256": "01693ede9032930f3590ff617adfa22acde47f2bd00956c9e792264eed5d1fac",
+    "bytes": 33422,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-diagnostics/final/decision.json",
+    "source_sha256": "4d163d6904cc1b10a258d09fb2dda4ff1da299bb6d5b24464f7e86cd0f67539f",
+    "archive": "decision.json",
+    "archive_sha256": "97cf272248716cbc9c15ed49d49f448dd70d944d4c5a65aef89482c96666184e",
+    "bytes": 530362,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/manifest.json",
+    "source_sha256": "c5ce8913bedee8ca68e680e54620ab28e0e82b6b8789f3459c35e18780f94a7f",
+    "archive": "early_manifest.json",
+    "archive_sha256": "c5ce8913bedee8ca68e680e54620ab28e0e82b6b8789f3459c35e18780f94a7f",
+    "bytes": 2931,
+    "transformation": "byte-exact copy"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_11/trained_actor_eval_actor.json",
+    "source_sha256": "e27ad9b5a7cd883ad260d3c1b496fb9d09d5b1762d2c0927d3ca1e923d28cd79",
+    "archive": "early_seed_11_trained_actor_eval_actor.json",
+    "archive_sha256": "b21aa23e79739c281ef49cc1acfea80b6a121678f3b1da16339c8574a53db06b",
+    "bytes": 6387,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_22/trained_actor_eval_actor.json",
+    "source_sha256": "317ac042a8ff1830acd0d15d36f2a54928d413d23a1596c68791e90539ac9ef5",
+    "archive": "early_seed_22_trained_actor_eval_actor.json",
+    "archive_sha256": "4b65ec75772be6cdf55adc7c9654e4e1307a84d80d274838245ae62b0f14fe40",
+    "bytes": 6386,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_33/trained_actor_eval_actor.json",
+    "source_sha256": "d9f8e38e8d2389e2c91a08c71513f64cd03e289b0707b6957d9892704e3a0720",
+    "archive": "early_seed_33_trained_actor_eval_actor.json",
+    "archive_sha256": "0e54e7514a55bd784bbdb810507f6e200aa592417344492a6a7137ef2856512a",
+    "bytes": 6383,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_44/trained_actor_eval_actor.json",
+    "source_sha256": "01771ca88d14b200c6235ecdf3af4b6413e019765bdacc2ea36ae303bb606362",
+    "archive": "early_seed_44_trained_actor_eval_actor.json",
+    "archive_sha256": "4a26c9d1bfb4b2fb84d3d7a61a490b8ac668ad84268cb38f9fdf9955a63c3164",
+    "bytes": 6396,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_55/trained_actor_eval_actor.json",
+    "source_sha256": "93f557aab5e97e4ad15a877a5b7b6871ded2173b5899739ef5fa0cc5af7212d2",
+    "archive": "early_seed_55_trained_actor_eval_actor.json",
+    "archive_sha256": "9731e7cda92fe997cc39f57b2d81922df0f93cbb643e9f902b2582414296ab6c",
+    "bytes": 6401,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_11/trained_actor_eval_critic.json",
+    "source_sha256": "8b880dc82798fd9f4e316ccb9a1355a1b87536e1e7f72b6d93a9c1cfde011cd7",
+    "archive": "early_seed_11_trained_actor_eval_critic.json",
+    "archive_sha256": "9525b7de5124ceee837cafb794483c78464faff7304c442888a7c82c961edab4",
+    "bytes": 6387,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_22/trained_actor_eval_critic.json",
+    "source_sha256": "8f9a1bb629844ec7fd046ff53ff257471c6742227126c868d480aa8e04fb0ddd",
+    "archive": "early_seed_22_trained_actor_eval_critic.json",
+    "archive_sha256": "861f5a62eb74c6e005274ec1f7f8b72f357677f44fcab6c4687c5911e51ca1eb",
+    "bytes": 6393,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_33/trained_actor_eval_critic.json",
+    "source_sha256": "f4d1c4b59206f009eb13c41be19894db2f18b617adab01678107e8dcd0140b80",
+    "archive": "early_seed_33_trained_actor_eval_critic.json",
+    "archive_sha256": "8bb3d2dc3641b1db7463498ec1002ea5de62b447b637fab4ff98bbabd5860cea",
+    "bytes": 6403,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_44/trained_actor_eval_critic.json",
+    "source_sha256": "51ccfdf35ec61b702c60e847a0aface8e898162f4c9ec11eb22e5af31e3758ed",
+    "archive": "early_seed_44_trained_actor_eval_critic.json",
+    "archive_sha256": "c09c04dae78ced14b732317838e11aeeacf2e500fab2aeb030c5fc20b382b367",
+    "bytes": 6398,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_55/trained_actor_eval_critic.json",
+    "source_sha256": "83afc46e615333d6d2b1c5e0c6c2eace42c61e2dabba65b1475fb7bfd5d06d3b",
+    "archive": "early_seed_55_trained_actor_eval_critic.json",
+    "archive_sha256": "12004e49e6f71934a4e91a34b56ebf47e5c82a33a3b152d0aea03b00a8b0a973",
+    "bytes": 6395,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_11/trained_actor_eval_lookahead.json",
+    "source_sha256": "a13b9199450f24b899eec6f27b519d0496fc23fcd530bd5156effd0c3d5d8e6f",
+    "archive": "early_seed_11_trained_actor_eval_lookahead.json",
+    "archive_sha256": "7f242fda4123a0aa91fc97490449b3c82063a8d5de69f7faf5276cb8f19ab7e1",
+    "bytes": 6384,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_22/trained_actor_eval_lookahead.json",
+    "source_sha256": "e7376ac7bbfaaca99d00d679b851a4ae27547e7161267e47d112377358c17553",
+    "archive": "early_seed_22_trained_actor_eval_lookahead.json",
+    "archive_sha256": "bb29a1e57c1a6bac67aa9a1355106d7088ed60f1e6a721a319eb071f4b2ee761",
+    "bytes": 6393,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_33/trained_actor_eval_lookahead.json",
+    "source_sha256": "c1ba043f1901f0bfa70d4cb249e59ceeb54d5776411d9142298d88b9921fddbd",
+    "archive": "early_seed_33_trained_actor_eval_lookahead.json",
+    "archive_sha256": "99d571b12ca6d17c8e55232b5b4476d00d5a9eeb5dedb9262ec831c001b0ba3a",
+    "bytes": 6397,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_44/trained_actor_eval_lookahead.json",
+    "source_sha256": "a9a2815c1ce8b18079458d17fb198275bd8af85debe9afc535a963eaa5a16a19",
+    "archive": "early_seed_44_trained_actor_eval_lookahead.json",
+    "archive_sha256": "0d2b8dfe9a79c5f12a49f313f37e4dcb7c3c289db05b4e8ad9800e686993b1cd",
+    "bytes": 6388,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_55/trained_actor_eval_lookahead.json",
+    "source_sha256": "8e7f9e848f79cf884ba4b55ae1eac59f758062da78865142c2c5ca7fde453780",
+    "archive": "early_seed_55_trained_actor_eval_lookahead.json",
+    "archive_sha256": "dc4cbd0749174ada490780d28b3034cebc9d5e6e8a63e21589a624e4210252e1",
+    "bytes": 6393,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_11/trained_critic_eval_critic.json",
+    "source_sha256": "2d1c38a7c3453c8abeff7e03246dbb2e4705724aefce2eb84155ec1c9fd27c60",
+    "archive": "early_seed_11_trained_critic_eval_critic.json",
+    "archive_sha256": "54a3ab2a980f5fbd0f1e78d733c49b1e0aaf011b8206d89e94df9f1ae769a31e",
+    "bytes": 6391,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_22/trained_critic_eval_critic.json",
+    "source_sha256": "c8387d282d253fab69b7a228917a1153c8306b7084d2e8a86f40315aaa25be77",
+    "archive": "early_seed_22_trained_critic_eval_critic.json",
+    "archive_sha256": "c141e7b6a3ccc4ab3fab01a211a255adfabcb46a6d82ea87f1118e54ab0d401e",
+    "bytes": 6396,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_33/trained_critic_eval_critic.json",
+    "source_sha256": "ed8cd56c9faef12eff2c8b2fa93c141b95a0c5ef5b15084e7be893ddb527e37c",
+    "archive": "early_seed_33_trained_critic_eval_critic.json",
+    "archive_sha256": "3509528f58993bc015bc644ccb0508c08a88337af86adaebd890fe8009744e36",
+    "bytes": 6396,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_44/trained_critic_eval_critic.json",
+    "source_sha256": "394479e9527412ebb3c2dfc06a25adc60cc2265974a26b0daecca3b2e6e4e42b",
+    "archive": "early_seed_44_trained_critic_eval_critic.json",
+    "archive_sha256": "8161756b853dcba992454e54d403217d799ea1f61f5f5aebfbd7e2d5f0cf7558",
+    "bytes": 6395,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_55/trained_critic_eval_critic.json",
+    "source_sha256": "e3f33a23471eb9b4613570a6a0d10d679c22e6eca41477f0e6029e9dd6b2640d",
+    "archive": "early_seed_55_trained_critic_eval_critic.json",
+    "archive_sha256": "d4e352e20fae6a278efcb1eda0c8fb5e32fa0092286a53b88b94a98c807d567f",
+    "bytes": 6396,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_11/trained_critic_eval_actor.json",
+    "source_sha256": "a12cb3ab2d819433b5b9f159b67297503b365d2fa3889215e84bffa8e00d9f2a",
+    "archive": "early_seed_11_trained_critic_eval_actor.json",
+    "archive_sha256": "bc3665a50a5ad5d536d875534a35ba178d88f364613f44e9755f08d2568ea258",
+    "bytes": 6385,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_22/trained_critic_eval_actor.json",
+    "source_sha256": "a0baf77f613891042fd13576bb7d732d12eb5a2f48412d8875e596390f0b0f1c",
+    "archive": "early_seed_22_trained_critic_eval_actor.json",
+    "archive_sha256": "8e25c1743c125a41e4b0b48109fce00dc6310081e50907a5839c113a3740b936",
+    "bytes": 6381,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_33/trained_critic_eval_actor.json",
+    "source_sha256": "fe09f4b8e9b62a3e8c7658878440273d16a32de69872d8df695f7a07dde6c6e2",
+    "archive": "early_seed_33_trained_critic_eval_actor.json",
+    "archive_sha256": "451f21d8259085a56d7cb043e4370322fb258345206174df2c604b949b598e58",
+    "bytes": 6391,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_44/trained_critic_eval_actor.json",
+    "source_sha256": "f22d020a6965509f58ac904df93a6a1a3d3e69260e735f4d4b6874f478675c71",
+    "archive": "early_seed_44_trained_critic_eval_actor.json",
+    "archive_sha256": "ba1ca124a3b789fa146b2af1d96af34b4aadd3e06abe6def301340cee5fd685e",
+    "bytes": 6403,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_55/trained_critic_eval_actor.json",
+    "source_sha256": "0a1e4c158361866c8a9f59d20c411c85e1fbc1b2d460ba11e72af9e2bee14a12",
+    "archive": "early_seed_55_trained_critic_eval_actor.json",
+    "archive_sha256": "bfa118c996ee366b43ad19b8a29c2d5c42ec15b0e92cfbdc4705554971b822cc",
+    "bytes": 6386,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_11/trained_lookahead_eval_lookahead.json",
+    "source_sha256": "bb096909f1807c13a6a0e9445d444be047423b265e07278190e49b3a279d7328",
+    "archive": "early_seed_11_trained_lookahead_eval_lookahead.json",
+    "archive_sha256": "7e4b7bf08043f5a519332258337af2fa8bc54c7ee36d6cf9484d00de53c1d765",
+    "bytes": 6422,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_22/trained_lookahead_eval_lookahead.json",
+    "source_sha256": "6d77b4b6b19eceb86fa42e7fb641b8a241f519d29a9510ebe5eb08500fa354a5",
+    "archive": "early_seed_22_trained_lookahead_eval_lookahead.json",
+    "archive_sha256": "9a051da2a74a55ac55bb640509bbe46c4e87a6511c3700db0a76009a4c10838b",
+    "bytes": 6404,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_33/trained_lookahead_eval_lookahead.json",
+    "source_sha256": "f2b4206807a990c1c5ba6dcc3dee34798ea581ab2432ee5ffb8557710be78f62",
+    "archive": "early_seed_33_trained_lookahead_eval_lookahead.json",
+    "archive_sha256": "97c7c3508f1a335316bc8e0c3059959a61917bb35ad9a5c914688a9451210f95",
+    "bytes": 6408,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_44/trained_lookahead_eval_lookahead.json",
+    "source_sha256": "416138c62b9f6c34ae1c4ebe94569ab65673ad8ab0c77c0674c127fb5df88177",
+    "archive": "early_seed_44_trained_lookahead_eval_lookahead.json",
+    "archive_sha256": "ddc23ac35bb55bdcd1232244308a4e29b5e472d8cbc42d5f240f355cc4aae52c",
+    "bytes": 6407,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_55/trained_lookahead_eval_lookahead.json",
+    "source_sha256": "e0d237ea22853ad66d219e9f997f8c3ab734d51e347a067f5c2bbceb3e420274",
+    "archive": "early_seed_55_trained_lookahead_eval_lookahead.json",
+    "archive_sha256": "02ccdc6d8352bdad3fb30e98c166f14f393d58ec42e079bfcf09eba42f445362",
+    "bytes": 6407,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_11/trained_lookahead_eval_actor.json",
+    "source_sha256": "124312e60142102b1b4188f78db49794ff1d2cfe98684716ed0fbe1eba7e95da",
+    "archive": "early_seed_11_trained_lookahead_eval_actor.json",
+    "archive_sha256": "f700d286dec1c7dc90817157c80e02e449ab1729abd6d5be314e90cbc77ab675",
+    "bytes": 6402,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_22/trained_lookahead_eval_actor.json",
+    "source_sha256": "3b5e98a4d3e3cfcfcd22f68cf4d438f06fa1e5335dbc1ead9ac7dc79e0160dfb",
+    "archive": "early_seed_22_trained_lookahead_eval_actor.json",
+    "archive_sha256": "93f6b5a54600ec85dd494b973d8d6d7f2c118eefc51ea84e1b4702fca4c93233",
+    "bytes": 6405,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_33/trained_lookahead_eval_actor.json",
+    "source_sha256": "d1518878a81aea1b5c7f5e92ac345c2fec67126adcf84eb54a20481e5efdaf2a",
+    "archive": "early_seed_33_trained_lookahead_eval_actor.json",
+    "archive_sha256": "6950bf1d714bebbf39c1c9fdec58820b3bf78f6b068153b580e2263ffff8ae66",
+    "bytes": 6396,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_44/trained_lookahead_eval_actor.json",
+    "source_sha256": "0aaf705af1e6ef9af85d47191e65f3e4bf43825559d50609861bedf93f571ee9",
+    "archive": "early_seed_44_trained_lookahead_eval_actor.json",
+    "archive_sha256": "af528172e4144147959b92aefffa4953cd2448643aafd6be0ee07034ff3c2a6a",
+    "bytes": 6390,
+    "transformation": "JSON whitespace removed; all fields retained"
+  },
+  {
+    "source": "runs/lookahead-extensive-early/seed_55/trained_lookahead_eval_actor.json",
+    "source_sha256": "376fc37b20602269960e7f643a8174c513eabfc74a2603218a561ecb407800e1",
+    "archive": "early_seed_55_trained_lookahead_eval_actor.json",
+    "archive_sha256": "84c3f1309b0db91f395e3892b28d099d2463fd00f0887bd82933303ff9c012be",
+    "bytes": 6399,
+    "transformation": "JSON whitespace removed; all fields retained"
+  }
+]

@@ -1,5 +1,9 @@
 # Lookahead integration checks
 
+For the subsequent five-seed study, forecast stress cases, and regression fixes,
+see [extensive validation results](LOOKAHEAD_EXTENSIVE_RESULTS.md). The measurements
+below preserve the original small integration check rather than a full benchmark.
+
 Measured on **2026-11-25** with Python 3.12.14, PyTorch 2.5.1+cpu,
 NumPy 2.3.5, Gymnasium 1.4.0, CPU, one PyTorch thread.
 

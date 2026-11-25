@@ -120,6 +120,13 @@ This is an experimental controller, without calibrated uncertainty or vehicle
 safety guarantees. See **[the lookahead guide](docs/LOOKAHEAD.md)** for formulas,
 training/evaluation commands, custom-task integration, and measured smoke results.
 
+**[Extended validation results](docs/LOOKAHEAD_EXTENSIVE_RESULTS.md)** now cover
+five training seeds per mode, 300,000 new training interactions, 380,000 evaluation
+interactions, and 125 software tests. They show an early benefit from planning
+on the tested Pendulum checkpoints, without establishing a final-return advantage
+after 20,000 training steps. The report separates the predeclared final endpoints
+from a secondary early-checkpoint follow-up and includes forecast failure cases.
+
 ## Tests
 
 ```bash

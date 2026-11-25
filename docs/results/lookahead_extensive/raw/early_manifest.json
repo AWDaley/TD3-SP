@@ -1,0 +1,97 @@
+{
+  "format": "td3-sp-secondary-early-checkpoint",
+  "version": 1,
+  "classification": "SECONDARY_POSTHOC",
+  "selection_reason": "The 5000-step checkpoint was selected after observing seed 11/22 monitoring curves.",
+  "primary_manifest": {
+    "path": "/workspace/scratch/a82d0eeb6c0e/TD3-SP/runs/lookahead-extensive/manifest.json",
+    "sha256": "b20b5455e9aea97b09b6bfebb64f1e8cce4f543c9a7bda18f64ef5351c2acb52"
+  },
+  "source": {
+    "path": "/workspace/scratch/a82d0eeb6c0e/TD3-SP/experiments/lookahead_early_checkpoint.py",
+    "sha256": "0f983265e91358d717810eb113a7638d280008ed6819d276e498486f4d74adc3"
+  },
+  "predictor": {
+    "path": "/workspace/scratch/a82d0eeb6c0e/TD3-SP/runs/pendulum-improved/model.pt",
+    "sha256": "dc814a0deaccdab4798aff9564271737486456857af8b8999b9948acd79f397e"
+  },
+  "protocol": {
+    "environment": "Pendulum-v1",
+    "training_seeds": [
+      11,
+      22,
+      33,
+      44,
+      55
+    ],
+    "checkpoint_online_step": 5000,
+    "training_data_budget_at_checkpoint": 11000,
+    "reset_seeds": [
+      910000,
+      910001,
+      910002,
+      910003,
+      910004,
+      910005,
+      910006,
+      910007,
+      910008,
+      910009,
+      910010,
+      910011,
+      910012,
+      910013,
+      910014,
+      910015,
+      910016,
+      910017,
+      910018,
+      910019
+    ],
+    "candidate_seed_offset": 10000000,
+    "candidates": 16,
+    "candidate_noise": 0.2,
+    "lookahead_horizon": 1,
+    "discount": 0.99,
+    "torch_threads": 1,
+    "configurations": [
+      {
+        "training_mode": "actor",
+        "evaluation_mode": "actor"
+      },
+      {
+        "training_mode": "actor",
+        "evaluation_mode": "critic"
+      },
+      {
+        "training_mode": "actor",
+        "evaluation_mode": "lookahead"
+      },
+      {
+        "training_mode": "critic",
+        "evaluation_mode": "critic"
+      },
+      {
+        "training_mode": "critic",
+        "evaluation_mode": "actor"
+      },
+      {
+        "training_mode": "lookahead",
+        "evaluation_mode": "lookahead"
+      },
+      {
+        "training_mode": "lookahead",
+        "evaluation_mode": "actor"
+      }
+    ]
+  },
+  "interpretation": [
+    "This secondary checkpoint choice was not preregistered; keep it distinct from the primary 20000-step endpoint.",
+    "Fresh reset seeds were not used for training, predictor fitting, or the monitoring observations that prompted this analysis.",
+    "Training seed is the replication unit; the twenty reset episodes are not independent trained policies.",
+    "Actor-only evaluation separates changes learned by the actor from planning required during deployment.",
+    "Frozen actor-trained checkpoint evaluations isolate deployment search from assisted-training effects.",
+    "All results reuse the same unchanged primary benchmark evaluator and candidate-seed rules.",
+    "Shared-host latency is descriptive and not a deployment timing guarantee."
+  ]
+}

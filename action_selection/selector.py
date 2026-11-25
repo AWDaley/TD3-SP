@@ -83,8 +83,11 @@ class ActionSelector:
         if not self.dtype.is_floating_point:
             raise ValueError("actor must use a floating-point dtype")
 
-        low = np.asarray(action_low, dtype=np.float64)
-        high = np.asarray(action_high, dtype=np.float64)
+        # Keep the controller's limits independent of mutable caller arrays.
+        # In particular, as_tensor can share float64 NumPy storage with a
+        # float64 actor while half_range would retain its old value.
+        low = np.array(action_low, dtype=np.float64, copy=True)
+        high = np.array(action_high, dtype=np.float64, copy=True)
         if low.ndim != 1 or high.shape != low.shape or low.size == 0:
             raise ValueError("action bounds must be equally sized nonempty vectors")
         if not (np.isfinite(low).all() and np.isfinite(high).all() and (high > low).all()):
@@ -177,6 +180,10 @@ class ActionSelector:
             raise ValueError(f"{name} must be a tensor shaped [batch] or [batch, 1]")
         if value.device != self.device:
             raise ValueError(f"{name} must share the actor's device")
+        if value.is_complex():
+            # A cast to float would silently discard imaginary NaNs as well
+            # as meaningful imaginary components before finite-score checks.
+            raise ValueError(f"{name} must be real-valued")
         if boolean and value.dtype != torch.bool:
             raise ValueError("terminated must have boolean dtype")
         return value.reshape(batch) if boolean else value.reshape(batch).to(self.dtype)
